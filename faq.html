@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Menu App Website Template | Home </title>
+<link rel="icon" href="images/x-icon.png" type="image/x-icon">
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/bootstrap1.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/jquery.easydropdown.js"></script>-->
+<!--start slider -->
+<link rel="stylesheet" href="css/fwslider.css" media="all">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/fwslider.js"></script>
+<!--end slider -->
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/logo.jpg" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						        <li><a href="product.html">Product Tour </a></li>
+                                <li class="current"><a href="faq.html">FAQs</a></li> 
+								<li><a href="team.html">Team</a></li>								
+								<li><a href="contact.html">Contact</a></li>								
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+	    		  <!-- start search-->
+				      <div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+						<!----search-scripts---->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+						<!----//search-scripts---->
+				    <ul class="icon1 sub-icon1 profile_img">
+					 <li>
+						<ul class="sub-icon1 list">
+						  <div class="product_control_buttons">
+						  	<a href="#"><img src="images/edit.png" alt=""/></a>
+						  		<a href="#"><img src="images/close_edit.png" alt=""/></a>
+						  </div>
+						   <div class="clear"></div>
+						  <li class="list_img"><img src="images/1.jpg" alt=""/></li>
+						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
+                          $12.00</span></li>
+						  <div class="login_buttons">
+							 <div class="check_button"><a href="checkout.html">Check out</a></div>
+							 <div class="login_button"><a href="login.html">Login</a></div>
+							 <div class="clear"></div>
+						  </div>
+						  <div class="clear"></div>
+						</ul>
+					 </li>
+				   </ul>
+		           <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	</div>
+	</div>  <!-- navigation -->  <!-- page -->
+ <div class="page-header">
+			<div class="container">
+				<h3>FAQ<small class="pull-right hidden-xs"> </small></h3>
+				<small class="visible-xs"><a href="./">Home</a> > <a class="active" href="#">FAQ</a></small>
+			</div>			
+		</div>
+		<div class="search-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 hidden-xs">						
+						<h4>Frequently Asked Questions</h4>
+					</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div id="faq">
+			<link href="css/style1.css" rel='stylesheet' type='text/css' />
+			
+				<ul id="result">
+				
+					<li>
+						<h4><span class="rn">1.</span><span class="not-rn">1. </span>How can I get my own domain name?</h4>
+						<p class="active">The Internet Corporation for Assigned Names and Numbers (ICANN) maintains a list of accredited registrars . Any of the companies on this list can register a domain name for you.</p>
+					</li>
+					<li>
+						<h4><span class="rn">2</span><span class="not-rn">2. </span>How can I block my hosting service's advertisements?</h4>
+						<p>Check the Terms of Service (TOS) agreement for your hosting service. It almost certainly prohibits interfering with the advertisements they add to your web pages. If you use some trick to block their advertisements on your own, then your hosting service may delete your account for violating its TOS.</p>
+					</li>
+					<li>
+						<h4><span class="rn">3</span><span class="not-rn">3. </span>How do I redirect someone to another page?</h4>
+						<p>The most reliable way is to configure the server to send out a redirection instruction when the old URL is requested. Then the browser will automatically get the new URL. This is the fastest and most efficient way, and is the only way described here that can convince indexing robots to phase out the old URL. For configuration details consult your server admin or documentation (with NCSA or Apache servers, use a Redirect statement in .htaccess).</p>
+						<p>If you can't set up a redirect, there are other possibilities. These are inferior because they tell the search engines that there's still a page at the old location, not that the page has moved to a new location.</p>
+					</li>
+					<li>
+						<h4><span class="rn">4</span><span class="not-rn">4. </span>How do I password protect my web site?</h4>
+						<p>Password protection is done through HTTP authentication. The configuration details vary from server to server, so you should read the authentication section of your server documentation. Contact your server administrator if you need help with this.</p>
+						<p>JavaScript password scripts provide only a facade of security. At a fundamental level, they work in one of two ways. Some scripts convert the password into a URL, which keeps the document secret by limiting the number of people who know its URL. Some scripts check the password and then go to a specific URL, which protects the document only from those who don't view the JavaScript source to get the URL of the document. Neither mechanism is really secure.</p>
+					</li>
+					<li>
+						<h4><span class="rn">5</span><span class="not-rn">5. </span>How can I disable the browser's right-click options?</h4>
+						<p>These scripts annoy visitors who lose ready access to their browsers' normal context-menu functions (e.g., "Open in new window" or "Bookmark link"). These scripts can also interfere with features like mouse gestures. Nothing (including these scripts) can prevent anyone from copying your source or images. The browser cannot display your document without the source and images, so your web server must send them to the browser. Even without the various "save" functions in today's browsers, someone can retrieve your source or images from the browser's cache, request them from the server with some other tool, or use a screen-capture tool to copy the images. These scripts do nothing when JavaScript is disabled or unavailable, when JavaScript access to right-click events is disabled, on systems without mice, or on systems with single-button mice.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="cta-bar">
+			<div class="container">
+				<h3>Can't find what you are looking for? Write to us.</h3>
+				<a href="contact.html" class="btn btn-main btn-lg">Contact</a>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4></h4>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4></h4>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Customer Support</h4>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<div class="footer_search">
+				    		   <form>
+				    			<input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+				    			<input type="submit" value="Go">
+				    		   </form>
+					        </div>
+							<ul class="social">	
+							  <li class="facebook"><a href="#"><span> </span></a></li>
+							  <li class="twitter"><a href="#"><span> </span></a></li>								  				
+						    </ul>
+		   					
+						</ul>
+					</div>
+				</div>
+				<div class="row footer_bottom">
+				    <div class="copy">
+			           <p>© 2014 Managed by <a href="#" target="_blank">Ajinkya & Shantanu</a></p>
+		            </div>
+   				</div>
+			</div>
+		</div>
+		
